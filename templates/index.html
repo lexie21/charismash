@@ -1,0 +1,71 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<style>
+    html {
+        text-align: center;
+    }
+    .intro {
+        flex-wrap: wrap;
+    }
+img {
+   
+    /* width: 70rem;
+    height: 60rem; */
+    border-radius: 1%;
+    margin-bottom: 0;
+   
+}
+
+secion.container.fluid.px-0 {
+    margin: 0;
+    justify-content: center;
+ 
+}
+img.img-fluid {
+    margin: 0 15px 0 15px;
+}
+h1 {
+    color: white;
+    font-weight: 800px;
+    font-size: 4em;
+    margin-top: 10px;
+    }
+.container.p-4 {
+    margin: auto;
+}
+/* h2 {
+    margin: 0 15px;
+    padding: 0.5em 0 1em 0; */
+}
+/* div.row.align-items-center {
+    
+} */
+h3,h4 {
+    font-style:italic;
+}
+</style>
+
+<h1 class='jumbotron'>Facemash</h1>
+
+
+
+
+<section class="container-fluid px-0">
+    <div class="row align-items-center"> 
+        <div class="col-lg-7">
+            <img class="img-fluid" src="static/themeimg.jpg" alt="silouhette image">
+        </div>
+        <div class="col-lg-5">
+            <!-- <div id="headingGroup" class="text-white text-center d-none d-lg-block mt-5"> -->
+               <h2>"A man shall never be judged based purely on his looks.<br> But looks shall, nevertheless,<br> be one of his most judgeable qualities."</h2>
+               
+               <h3><a href="{{url_for('rank')}}">Don't you agree?</a></h3>
+                
+            <!-- </div> -->
+        </div>
+    </div>
+
+</section> 
+
+{% endblock %}

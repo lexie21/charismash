@@ -1,0 +1,124 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<style>
+  h1 {
+    margin: auto;
+    margin-top: 5%;
+    font-weight: bold;
+  }
+    section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    
+}
+#space {
+  margin: 2em;
+  align-self: flex-end;
+  
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+
+font-family: 'Racing Sans One', cursive;
+
+}
+
+img.button {
+    width: 18rem;
+    height: 25rem;
+    border-radius: 8px;
+    border-color: none;
+    color: none;
+    text-align: center;
+    background-color: none;
+    
+    
+}
+.button {
+  width: 18rem;
+  height: 25rem; 
+  color: none;
+  background-color: none;
+  border-radius: 8px;
+  border-color: none;
+  text-align: center;
+  box-shadow: 2px 2px 3px black;
+}
+h4 {
+  text-shadow: 3px 3px 7px black;
+}
+button { width: 18rem;
+  height: 25rem;
+  color:none;
+  background:none;
+  border:none;
+  text-align: center;
+  position: relative;
+}
+.overlay {
+  margin: 2rem auto;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+.text {
+  margin-top: 5%;
+  margin: center;
+  font-size: 12em;
+  text-shadow: 3px 3px 7px black;
+ 
+font-family: 'Racing Sans One', cursive;
+
+  
+} 
+/* 
+.column {
+  flex: 40%;
+  padding: 5px;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+h4 {
+    font-size: 40px;
+}
+.button img {
+display: block;
+   
+   min-width:300px;
+   max-width: 800px; 
+   height: 500px; 
+   justify-content: center;
+} */
+
+
+</style>
+<div class="overlay">
+
+
+<form  action='/choosePics' method='POST' >
+<section>
+  
+    <button type="submit"  name='images' value='{{img1}}+{{img2}}'><img class="button" src="static/candpics/{{img1}}" name={{img1}} alt="IMG1"></button>
+    <h3 id="space">  OR  </h3>
+    <button type="submit"  name='images' value='{{img2}}+{{img1}}'><img class="button" src="static/candpics/{{img2}}"  name={{img2}} alt="IMG2"></button>
+
+</section>
+</form>
+</div>
+<div class="text">Ranking Zone</div>
+<br><br><br>
+<h1>                             </h1>
+<h4>Beauty is in the eye of the beholder. </h4>
+
+
+
+{% endblock %}
